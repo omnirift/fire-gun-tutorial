@@ -12,12 +12,7 @@ public class PlayerWeapon : MonoBehaviour {
 
     public float lifeTime = 3;
 
-	// Use this for initialization
-	void Awake () 
-    {
-        // ignore player level
-		Physics.IgnoreLayerCollision(7, 7, true);
-    }
+//useless fucking shit just got removed from here, fuck you fuck fuck
     
     // Update is called once per frame
     void Update () 
@@ -31,6 +26,9 @@ public class PlayerWeapon : MonoBehaviour {
     private void Fire() 
     {
         GameObject bullet = Instantiate(bulletPrefab);
+
+        Physics.IgnoreCollision(bullet.GetComponent<Collider>(),
+                                bulletSpawn.parent.GetComponent<Collider>()); 
 
         bullet.transform.position = bulletSpawn.position;
 
