@@ -11,8 +11,6 @@ public class PlayerWeapon : MonoBehaviour {
     public float bulletSpeed = 30;
 
     public float lifeTime = 3;
-
-//useless fucking shit just got removed from here, fuck you fuck fuck
     
     // Update is called once per frame
     void Update () 
